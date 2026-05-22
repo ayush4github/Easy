@@ -1,0 +1,11 @@
+def find_duplicate_character_in_string(text):
+    characters = sorted(text)
+    duplicates = []
+    for index in range(len(text)-1):
+        if characters[index]==characters[index+1]:
+            if characters[index] not in duplicates:
+                duplicates.append(characters[index])
+    return duplicates
+text = input("Enter string to find duplicates: ")
+result = find_duplicate_character_in_string(text)
+print("Duplicates: ", result)
